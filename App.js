@@ -6,8 +6,9 @@ import {
   Text,
   TouchableWithoutFeedback,
   View,
-  Keyboard
+  Keyboard,
 } from "react-native";
+
 import AddTodo from "./components/addTodo";
 import Header from "./components/header";
 import TodoItem from "./components/TodoItem";
@@ -38,9 +39,11 @@ export default function App() {
   };
 
   return (
-    <TouchableWithoutFeedback onPress={() => {
-      Keyboard.dismiss();
-    }}>
+    <TouchableWithoutFeedback
+      onPress={() => {
+        Keyboard.dismiss();
+      }}
+    >
       <View style={styles.container}>
         <Header />
 
@@ -63,12 +66,13 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
   },
   content: {
     padding: 40,
+    flex: 1,
   },
   list: {
+    flex: 1,
     marginTop: 20,
   },
 });
